@@ -1,0 +1,122 @@
+def add(x, y)
+
+  x + y
+
+end
+
+
+
+def subtract(x, y)
+
+  x - y
+
+end
+
+
+
+def multiply(x, y)
+
+  x * y
+
+end
+
+
+
+def divide(x, y)
+
+  if y != 0
+
+    x / y
+
+  else
+
+    "Error: Division by zero"
+
+  end
+
+end
+
+
+
+def calculator
+
+  puts "Welcome to Simple Calculator"
+
+  puts "Select operation:"
+
+  puts "1. Add"
+
+  puts "2. Subtract"
+
+  puts "3. Multiply"
+
+  puts "4. Divide"
+
+  puts "5. Exit"
+
+
+
+  print "Enter choice (1/2/3/4/5): "
+
+  choice = gets.chomp.to_i
+
+
+
+  if ![1, 2, 3, 4, 5].include?(choice)
+
+    puts "Invalid choice"
+
+    return
+
+  end
+
+
+
+  if choice == 5
+
+    puts "Goodbye!"
+
+    return
+
+  end
+
+
+
+  print "Enter first number: "
+
+  num1 = gets.chomp.to_f
+
+
+
+  print "Enter second number: "
+
+  num2 = gets.chomp.to_f
+
+
+
+  case choice
+
+  when 1
+
+    puts "Result: #{add(num1, num2)}"
+
+  when 2
+
+    puts "Result: #{subtract(num1, num2)}"
+
+  when 3
+
+    puts "Result: #{multiply(num1, num2)}"
+
+  when 4
+
+    puts "Result: #{divide(num1, num2)}"
+
+  end
+
+end
+
+
+
+calculator
+
